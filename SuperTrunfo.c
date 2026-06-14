@@ -74,11 +74,11 @@ int main() {
     scanf("%d", &pontosTuristicos2);
 
     // Cálculos da Carta 1
-    densidade1 = populacao1 / area1;
+    densidade1 = (float)populacao1 / area1;
     pibPerCapita1 = (pib1 * 1000000000.0f) / populacao1;
 
     // Cálculos da Carta 2
-    densidade2 = populacao2 / area2;
+    densidade2 = (float)populacao2 / area2;
     pibPerCapita2 = (pib2 * 1000000000.0f) / populacao2;
 
     // Super Poder
