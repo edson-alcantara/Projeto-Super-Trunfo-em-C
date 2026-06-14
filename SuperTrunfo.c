@@ -11,6 +11,7 @@ int main() {
     int pontosTuristicos1;
     float densidade1;
     float pibPerCapita1;
+    float superPoder1;
 
     // Carta 2
     char estado2;
@@ -22,6 +23,7 @@ int main() {
     int pontosTuristicos2;
     float densidade2;
     float pibPerCapita2;
+    float superPoder2;
 
     // Cadastro da Carta 1
     printf("=== Cadastro da Carta 1 ===\n");
@@ -79,6 +81,23 @@ int main() {
     densidade2 = populacao2 / area2;
     pibPerCapita2 = pib2 / populacao2;
 
+    // Super Poder
+    superPoder1 =
+        (float) populacao1 +
+        area1 +
+        pib1 +
+        pontosTuristicos1 +
+        pibPerCapita1 +
+        (1.0f / densidade1);
+
+    superPoder2 =
+        (float) populacao2 +
+        area2 +
+        pib2 +
+        pontosTuristicos2 +
+        pibPerCapita2 +
+        (1.0f / densidade2);
+
     // Exibição da Carta 1
     printf("\n=== Carta 1 ===\n");
     printf("Estado: %c\n", estado1);
@@ -90,6 +109,7 @@ int main() {
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
     printf("Densidade Populacional: %.2f hab/km\n", densidade1);
     printf("PIB per Capita: %.2f\n", pibPerCapita1);
+    printf("Super Poder: %.2f\n", superPoder1);
 
     // Exibição da Carta 2
     printf("\n=== Carta 2 ===\n");
@@ -102,6 +122,26 @@ int main() {
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
     printf("Densidade Populacional: %.2f hab/km\n", densidade2);
     printf("PIB per Capita: %.2f\n", pibPerCapita2);
+    printf("Super Poder: %.2f\n", superPoder2);
+
+        // Comparações
+    printf("\n=== Comparacao de Cartas ===\n");
+
+    printf("Populacao: %d\n", populacao1 > populacao2);
+    printf("Area: %d\n", area1 > area2);
+    printf("PIB: %d\n", pib1 > pib2);
+    printf("Pontos Turisticos: %d\n",
+           pontosTuristicos1 > pontosTuristicos2);
+
+    // Menor densidade vence
+    printf("Densidade Populacional: %d\n",
+           densidade1 < densidade2);
+
+    printf("PIB per Capita: %d\n",
+           pibPerCapita1 > pibPerCapita2);
+
+    printf("Super Poder: %d\n",
+           superPoder1 > superPoder2);
 
     return 0;
 }
